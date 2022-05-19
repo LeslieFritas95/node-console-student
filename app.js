@@ -72,14 +72,14 @@ function startMenuDone(err, res){
   }
 
   function executeEditStudent(err, res){
-    const humanIndex = parseInt(res.selectedIndex);
+    const selectedIndex = parseInt(res.selectedIndex);
   
-    if (humanIndex === NaN) {
+    if (selectedIndex === NaN) {
       startMenu()
       return;
     }
   
-    const index = humanIndex - 1;
+    const index = selectedIndex - 1;
   
     const isInArray = index >= 0 && index < studentArray.length;
   
@@ -322,3 +322,13 @@ function tryToSaveData(){
   
 prompt.start()
 startMenu();
+
+
+
+//const student = studenArray[index];
+//if(res.name){
+//   student.name = res.name;
+// }
+// student.surname = res.surname ? res.surname : student.surname;
+// student.gender = gender;
+// student.yob = res.yob || student.yob
